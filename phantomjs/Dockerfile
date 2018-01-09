@@ -12,12 +12,9 @@ RUN apt-get update \
        | tar -xvj \
     \
     && ln -s /phantomjs-${PHANTOMJS_VERSION}-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs \
-    && ls -la phantomjs-${PHANTOMJS_VERSION}-linux-x86_64/bin/phantomjs \
     && ln -s /phantomjs-${PHANTOMJS_VERSION}-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs \
     && ln -s /phantomjs-${PHANTOMJS_VERSION}-linux-x86_64/bin/phantomjs /usr/bin/phantomjs \
-    && ls -la /usr/bin/phantomjs \
     &&  /usr/bin/phantomjs -v \
-    && echo $PATH \
     # Checking if phantom works
     && phantomjs -v \
     \
